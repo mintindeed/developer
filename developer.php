@@ -140,6 +140,11 @@ class Automattic_Developer {
 				'name'		=> esc_html__( 'Pig Latin', 'a8c-developer' ),
 				'active'	=> class_exists( 'PigLatin' ),
 			),
+			'mp6' => array(
+				'project_type' => 'wpcom-vip',
+				'name' 		   => esc_html__( 'MP6', 'a8c-developer' ),
+				'active'       => function_exists( 'mp6_replace_wp_default_styles' ),
+			),
 
 			// Theme Developer
 			'rtl-tester' => array(
@@ -839,7 +844,7 @@ class Automattic_Developer {
 
 	private static function is_dev_version() {
 		$cur = get_preferred_from_update_core();
-		return isset( $cur->response ) && $cur->response == 'development';
+		return ( isset($cur->response) && ( $cur->response == 'development' ) );
 	}
 
 	private static function is_project_type( $project, $type ) {
