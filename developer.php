@@ -140,12 +140,6 @@ class Automattic_Developer {
 				'name'		=> esc_html__( 'Pig Latin', 'a8c-developer' ),
 				'active'	=> class_exists( 'PigLatin' ),
 			),
-			'mp6' => array(
-				'project_type' => 'wpcom-vip',
-				'name' 		   => esc_html__( 'MP6', 'a8c-developer' ),
-				'active'       => function_exists( 'mp6_replace_wp_default_styles' ),
-			),
-
 			// Theme Developer
 			'rtl-tester' => array(
 				'project_type' => 'wporg-theme',
